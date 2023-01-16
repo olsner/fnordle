@@ -1,7 +1,7 @@
 {
-  "name": "wordl",
+  "name": "fnordle",
   "version": "0.1.0",
-  "homepage": "http://hellowordl.net/",
+  "homepage": "http://olsner.github.io/fnordle/",
   "private": false,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",

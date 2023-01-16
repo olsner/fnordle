@@ -31,10 +31,11 @@ interface GameProps {
   keyboardLayout: string;
 }
 
-const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
-const minLength = 4;
+// const targets = targetList.slice(0, targetList.indexOf("murky") + 1); // Words no rarer than this one
+const targets = targetList;
+const minLength = 5;
 const defaultLength = 5;
-const maxLength = 11;
+const maxLength = 5;
 const limitLength = (n: number) =>
   n >= minLength && n <= maxLength ? n : defaultLength;
 
@@ -261,7 +262,7 @@ function Game(props: GameProps) {
   return (
     <div className="Game" style={{ display: props.hidden ? "none" : "block" }}>
       <div className="Game-options">
-        <label htmlFor="wordLength">Letters:</label>
+        {/*<label htmlFor="wordLength">Letters:</label>
         <input
           type="range"
           min={minLength}
@@ -283,7 +284,7 @@ function Game(props: GameProps) {
             setWordLength(length);
             setHint(`${length} letters`);
           }}
-        ></input>
+        ></input>*/}
         <button
           style={{ flex: "0 0 auto" }}
           disabled={gameState !== GameState.Playing || guesses.length === 0}
